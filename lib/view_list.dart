@@ -73,8 +73,8 @@ class _View_ListState extends State<View_List> {
               child: Center(
                 child: Column(
                   children: [
-                    Text('날짜 : 2022-09-01'),
-                    Text('운동내용 : 등, 가슴'),
+                    Text('날짜 : ${itemList[index].split('/')[0]}'),
+                    Text('운동내용 : ${itemList[index].split('/')[1]}'),
                   ],
                 ),
               ),
