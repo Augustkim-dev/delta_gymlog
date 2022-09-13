@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:delta_gymlog/gym_add.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -66,6 +68,17 @@ class _View_ListState extends State<View_List> {
     return Scaffold(
       appBar: AppBar(
         title: Text('List 01'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Gym_Add()),
+              );
+            },
+            icon: Icon(Icons.add),
+          ),
+        ],
       ),
       body: ListView.builder(
           itemBuilder: (context, index) {
